@@ -1,0 +1,28 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# CodeIgniter runtime
+application/cache/*
+!application/cache/index.html
+application/logs/*
+!application/logs/index.html
+application/session/
+ci_sessions/
+
+# Temp uploads
+uploads/temp/*
+!uploads/temp/index.html
+!uploads/temp/.htaccess

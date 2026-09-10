@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="52" viewBox="0 0 240 52" role="img" aria-label="Digital Creatorss">
+  <defs>
+    <linearGradient id="dcg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5BB8BF"/>
+      <stop offset="100%" stop-color="#3E9DA5"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="6" width="40" height="40" rx="10" fill="url(#dcg)"/>
+  <text x="22" y="34" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">DC</text>
+  <text x="52" y="24" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#181819">Digital Creatorss</text>
+  <text x="52" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.4" fill="#3E9DA5">SOFTWARE &amp; MARKETPLACE</text>
+</svg>

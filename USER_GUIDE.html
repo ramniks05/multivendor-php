@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Vendor Marketplace User Guide</title>
+    <style>
+        :root {
+            --primary: #3E9DA5;
+            --primary-dark: #2F8087;
+            --dark: #181819;
+            --text: #1C1C1E;
+            --muted: #5B6470;
+            --bg: #F4F6F7;
+            --card: #FFFFFF;
+            --border: #E6EAED;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.55;
+        }
+        .wrap { max-width: 920px; margin: 0 auto; padding: 32px 20px 80px; }
+        .cover {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 16px;
+            padding: 40px 36px;
+            margin-bottom: 28px;
+        }
+        .cover .eyebrow {
+            color: var(--primary);
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+        .cover h1 { margin: 0 0 10px; font-size: 32px; letter-spacing: -.03em; }
+        .cover p { margin: 0; color: #CFD6E4; max-width: 640px; }
+        .meta {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+            font-size: 13px;
+            color: #B7C0CC;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 22px;
+            margin: 36px 0 12px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+        h2:first-of-type { border-top: 0; margin-top: 8px; }
+        h3 { font-size: 16px; margin: 20px 0 8px; color: var(--dark); }
+        p, li { color: var(--text); }
+        .muted { color: var(--muted); }
+        a { color: var(--primary-dark); }
+        .toc a { text-decoration: none; }
+        .toc ol { padding-left: 20px; }
+        .toc li { margin: 6px 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background: #F4F6F7; }
+        code, .url {
+            font-family: Consolas, "Courier New", monospace;
+            background: #F4F6F7;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .steps { padding-left: 20px; }
+        .steps li { margin: 8px 0; }
+        .note {
+            background: #E7F4F5;
+            border-left: 4px solid var(--primary);
+            padding: 12px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+        }
+        .warn {
+            background: #FFF6E8;
+            border-left: 4px solid #D4A017;
+            padding: 12px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+        .print-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff !important;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        @media print {
+            body { background: #fff; }
+            .wrap { padding: 0; max-width: none; }
+            .cover { border-radius: 0; }
+            .print-btn, .no-print { display: none !important; }
+            .card, h2 { break-inside: avoid; }
+            a { color: #000; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="cover">
+        <p class="eyebrow">Digital Creatorss</p>
+        <h1>Multi-Vendor Marketplace<br>User Guide</h1>
+        <p>A complete guide for buyers, vendors, and administrators. Use this document to operate the marketplace after handover or during a live demo.</p>
+        <div class="meta">
+            <span>Platform: Modesy-based marketplace</span>
+            <span>Version: 1.8.1</span>
+            <span>Powered by Digital Creatorss</span>
+        </div>
+    </div>
+
+    <div class="card no-print">
+        <p style="margin:0 0 10px;"><strong>Share this file</strong> as HTML, or open it and print to PDF (Ctrl+P).</p>
+        <a class="print-btn" href="javascript:window.print()">Print / Save as PDF</a>
+    </div>
+
+    <div class="card">
+        <h3 style="margin-top:0;">What this platform is</h3>
+        <p>This is a <strong>multi-vendor marketplace</strong>. Independent shops list and sell products. The platform owner (you) runs the website, categories, payments, and vendor approvals. Digital Creatorss is the technology partner that built and powers the platform. Digital Creatorss does <strong>not</strong> sell products on the marketplace.</p>
+        <p class="muted" style="margin-bottom:0;">Three roles use the site: <strong>Buyers</strong> shop, <strong>Vendors</strong> sell, <strong>Admin</strong> manages the platform.</p>
+    </div>
+
+    <h2 id="toc">Contents</h2>
+    <div class="card toc">
+        <ol>
+            <li><a href="#access">Demo access and important links</a></li>
+            <li><a href="#buyer">Buyer guide</a></li>
+            <li><a href="#become-vendor">How to become a vendor</a></li>
+            <li><a href="#add-product">How a vendor adds a product</a></li>
+            <li><a href="#vendor-ops">Vendor: orders, shipping, earnings</a></li>
+            <li><a href="#admin-catalog">Admin: categories, brands, fields, variations</a></li>
+            <li><a href="#admin-users">Admin: users and shop approval</a></li>
+            <li><a href="#admin-orders">Admin: orders, payouts, settings</a></li>
+            <li><a href="#checklist">Go-live checklist</a></li>
+            <li><a href="#support">Support</a></li>
+        </ol>
+    </div>
+
+    <h2 id="access">1. Demo access and important links</h2>
+    <p>Replace the demo URL with the live domain after hosting. Paths stay the same.</p>
+    <table>
+        <tr><th>Page</th><th>URL</th></tr>
+        <tr><td>Storefront</td><td><span class="url">http://127.0.0.1:8080/</span></td></tr>
+        <tr><td>Buyer / vendor login</td><td><span class="url">/login</span></td></tr>
+        <tr><td>Register</td><td><span class="url">/register</span></td></tr>
+        <tr><td>Become a seller</td><td><span class="url">/start-selling</span></td></tr>
+        <tr><td>Vendor dashboard</td><td><span class="url">/dashboard</span></td></tr>
+        <tr><td>Add product</td><td><span class="url">/dashboard/add-product</span></td></tr>
+        <tr><td>Admin login</td><td><span class="url">http://127.0.0.1:8080/admin/login</span></td></tr>
+    </table>
+    <h3>Demo logins (change these on a live site)</h3>
+    <table>
+        <tr><th>Role</th><th>Email</th><th>Password</th><th>Notes</th></tr>
+        <tr><td>Admin</td><td>admin@example.com</td><td>admin123</td><td>Full control panel</td></tr>
+        <tr><td>Vendor — NovaTech Store</td><td>novatech@shop.example</td><td>vendor123</td><td>Electronics</td></tr>
+        <tr><td>Vendor — Urban Threads</td><td>urbanthreads@shop.example</td><td>vendor123</td><td>Fashion</td></tr>
+        <tr><td>Vendor — Nest &amp; Home</td><td>nesthome@shop.example</td><td>vendor123</td><td>Home</td></tr>
+        <tr><td>Vendor — Glow Lab</td><td>glowlab@shop.example</td><td>vendor123</td><td>Beauty</td></tr>
+    </table>
+    <p class="warn"><strong>Security:</strong> These passwords are for demonstration only. Before going live, change every password, use real emails, and turn on HTTPS.</p>
+
+    <h2 id="buyer">2. Buyer guide</h2>
+    <h3>Browse and search</h3>
+    <ol class="steps">
+        <li>Open the homepage. Use the top menu for categories (Electronics, Fashion, Home &amp; Living, Beauty, Sports, Kids).</li>
+        <li>Use the search bar to find a product or a shop.</li>
+        <li>Open a product to see price, brand, photos, description, and options such as size or colour.</li>
+    </ol>
+    <h3>Create an account</h3>
+    <ol class="steps">
+        <li>Click <strong>Register</strong> or go to <span class="url">/register</span>.</li>
+        <li>Enter name, email, and password.</li>
+        <li>Log in from <span class="url">/login</span>.</li>
+    </ol>
+    <h3>Buy a product</h3>
+    <ol class="steps">
+        <li>Open a product. Choose variation options if they appear (Size, Colour, Shade).</li>
+        <li>Click <strong>Add to cart</strong>.</li>
+        <li>Open the cart, check quantities, then continue to checkout.</li>
+        <li>Enter shipping address.</li>
+        <li>Choose a payment method (for example Cash on Delivery if it is enabled) and place the order.</li>
+        <li>Track the order from the buyer profile after login.</li>
+    </ol>
+    <div class="note">Wishlist, shop pages, and order history are available after login. Buyers can message a seller from the product or shop page if messaging is enabled.</div>
+
+    <h2 id="become-vendor">3. How to become a vendor</h2>
+    <p>Any registered member can apply to open a shop. Shop verification is <strong>on</strong>, so Admin must approve the request before the seller can list products.</p>
+    <ol class="steps">
+        <li>Register and log in as a normal user.</li>
+        <li>Go to <span class="url">/start-selling</span> or click <strong>Sell now</strong> in the header.</li>
+        <li>Enter shop name, first name, last name, phone, and location.</li>
+        <li>Accept the terms and submit.</li>
+        <li>Wait for Admin approval. Status messages:
+            <ul>
+                <li>Request sent — waiting for review</li>
+                <li>Approved — account becomes a vendor</li>
+                <li>Declined — seller cannot open the shop until Admin changes it</li>
+            </ul>
+        </li>
+        <li>After approval, open <span class="url">/dashboard</span> to add products.</li>
+    </ol>
+    <p>Admin approves shops here: <strong>Admin → Membership → Shop opening requests</strong>.</p>
+
+    <h2 id="add-product">4. How a vendor adds a product</h2>
+    <p>Log in as a vendor, then go to <strong>Dashboard → Products → Add Product</strong>, or open <span class="url">/dashboard/add-product</span>.</p>
+    <h3>Step 1 — General information</h3>
+    <ol class="steps">
+        <li>Upload product photos (first image is the main thumbnail).</li>
+        <li>Choose product type: physical (shipped) or digital, if both are enabled.</li>
+        <li>Choose listing type: usually <strong>Sell on site</strong>.</li>
+        <li>Select <strong>Category</strong>, then the subcategory if it appears (example: Electronics → Audio).</li>
+        <li>Select <strong>Brand</strong> if it applies (example: SoundMax, UrbanWear).</li>
+        <li>Enter the product title and description. Fill SEO title/description if you want better search results.</li>
+        <li>Save and continue.</li>
+    </ol>
+    <h3>Step 2 — Details</h3>
+    <ol class="steps">
+        <li>Enter <strong>price</strong>, discount, VAT, SKU, and stock.</li>
+        <li>Fill <strong>custom fields</strong> if they appear (Colour, Size, Warranty, Material, Skin Type, Age Group). These come from the category Admin linked.</li>
+        <li>Add <strong>variations</strong> if the product has options:
+            <ul>
+                <li>Click <strong>Add variation</strong></li>
+                <li>Name it (Size, Colour, Shade)</li>
+                <li>Choose type: dropdown or colour buttons</li>
+                <li>Add options (S, M, L or Black, White) and stock per option</li>
+                <li>Mark one option as default</li>
+            </ul>
+        </li>
+        <li>Set shipping class / delivery time if shipping is enabled.</li>
+        <li>Submit. Products go live immediately in this demo (<em>approve before publishing</em> is off). If a client turns that setting on, products wait in <strong>Pending products</strong> until Admin approves them.</li>
+    </ol>
+    <h3>Edit a product later</h3>
+    <p>Dashboard → Products → edit the item. Use the same two screens to change category, brand, price, stock, custom fields, and variations.</p>
+    <div class="note"><strong>Variations are per product.</strong> There is no global “Variables” page. Size and colour live on each product’s details screen. Brands and categories are managed by Admin and then selected by the vendor.</div>
+
+    <h2 id="vendor-ops">5. Vendor: orders, shipping, earnings</h2>
+    <table>
+        <tr><th>Dashboard menu</th><th>What it is for</th></tr>
+        <tr><td>Products</td><td>All listings, drafts, hidden, sold</td></tr>
+        <tr><td>Bulk product upload</td><td>CSV upload of many products</td></tr>
+        <tr><td>Sales</td><td>New and completed orders</td></tr>
+        <tr><td>Quote requests</td><td>Price-request listings, if used</td></tr>
+        <tr><td>Earnings / Withdraw</td><td>Balance and payout requests</td></tr>
+        <tr><td>Shop settings</td><td>Shop name, description, cover</td></tr>
+        <tr><td>Shipping settings</td><td>Zones, methods, delivery times</td></tr>
+        <tr><td>Comments / Reviews</td><td>Buyer feedback on the shop’s products</td></tr>
+    </table>
+    <h3>Fulfil an order</h3>
+    <ol class="steps">
+        <li>Open <strong>Sales</strong> and click the order.</li>
+        <li>Confirm items and shipping address.</li>
+        <li>Update status as you pack and ship (processing → shipped → completed, depending on settings).</li>
+        <li>Earnings are added to the seller balance after the sale is completed, minus commission.</li>
+        <li>Request a payout when the balance is above the minimum. Admin pays out from Payout requests.</li>
+    </ol>
+
+    <h2 id="admin-catalog">6. Admin: categories, brands, fields, variations</h2>
+    <p>Log in at <span class="url">/admin/login</span>. Catalog tools are in the left sidebar.</p>
+    <h3>Categories</h3>
+    <ol class="steps">
+        <li>Go to <strong>Categories</strong>.</li>
+        <li>Use <strong>Add category</strong> for a main category (Electronics, Fashion, …).</li>
+        <li>To add a subcategory, choose a parent while adding (Mobiles under Electronics, Men under Fashion).</li>
+        <li>Upload a category image if you want it in the menu and homepage tiles. Keep images as photos or plain graphics. Do not print the category name on the image — the site already shows the name as text.</li>
+        <li>Drag to reorder. Set featured / show on homepage if you want it on the home page.</li>
+    </ol>
+    <h3>Brands</h3>
+    <ol class="steps">
+        <li>Go to <strong>Brands</strong>.</li>
+        <li>Enter the brand name and optional slug, then save.</li>
+        <li>Vendors pick this brand when they add or edit a product.</li>
+        <li>The brand also shows on the product page and in the admin product list.</li>
+    </ol>
+    <p>Demo brands already created: Apex, SoundMax, UrbanWear, Oak &amp; Linen, Lumina, FlexFit, TinyTown.</p>
+    <h3>Custom fields</h3>
+    <ol class="steps">
+        <li>Go to <strong>Custom Fields → Add custom field</strong>.</li>
+        <li>Name it (Colour, Size, Warranty, Material).</li>
+        <li>Choose type: dropdown, checkbox, text, number, date.</li>
+        <li>Add options if it is a dropdown.</li>
+        <li>Link the field to one or more categories so it appears only on matching products.</li>
+        <li>Optionally add it to product filters on the shop listing page.</li>
+    </ol>
+    <h3>Product variations</h3>
+    <p>Admin does not create a global variation list. Vendors add Size/Colour on each product. Admin can still open <strong>Products → Product details</strong> to see which variations a listing has.</p>
+    <p>To allow variations: <strong>Settings → Product settings</strong> and keep <strong>Variations</strong> enabled (already on in this demo).</p>
+
+    <h2 id="admin-users">7. Admin: users and shop approval</h2>
+    <table>
+        <tr><th>Menu</th><th>Use it to</th></tr>
+        <tr><td>Shop opening requests</td><td>Approve or decline new vendors</td></tr>
+        <tr><td>Vendors</td><td>See all approved shops</td></tr>
+        <tr><td>Members</td><td>See buyers / members who are not vendors yet</td></tr>
+        <tr><td>Administrators</td><td>Add extra admin users</td></tr>
+    </table>
+    <h3>Approve a new shop</h3>
+    <ol class="steps">
+        <li>Open <strong>Shop opening requests</strong>.</li>
+        <li>Review shop name and applicant details.</li>
+        <li>Approve. The user role becomes vendor and they can add products.</li>
+    </ol>
+
+    <h2 id="admin-orders">8. Admin: orders, payouts, settings</h2>
+    <h3>Orders</h3>
+    <ol class="steps">
+        <li><strong>Orders</strong> — all marketplace orders.</li>
+        <li><strong>Transactions</strong> — payment records.</li>
+        <li><strong>Bank transfer notifications</strong> — if buyers pay by bank transfer.</li>
+        <li><strong>Invoices</strong> — download or review invoices.</li>
+    </ol>
+    <h3>Payouts</h3>
+    <ol class="steps">
+        <li><strong>Seller balances</strong> — what each vendor is owed.</li>
+        <li><strong>Payout requests</strong> — vendor asked to withdraw.</li>
+        <li>Mark paid / complete the payout after you transfer the money.</li>
+        <li><strong>Payout settings</strong> — PayPal, IBAN, SWIFT, minimum amounts.</li>
+    </ol>
+    <h3>Homepage and look</h3>
+    <table>
+        <tr><th>Setting</th><th>Where</th></tr>
+        <tr><td>Slider banners</td><td>Slider</td></tr>
+        <tr><td>Featured categories / homepage blocks</td><td>Homepage manager</td></tr>
+        <tr><td>Site colour, logo text is the shop name</td><td>Visual settings</td></tr>
+        <tr><td>Fonts</td><td>Font settings (storefront uses Poppins in this demo)</td></tr>
+        <tr><td>Site name, contact, about</td><td>General settings / Pages</td></tr>
+        <tr><td>Payments and COD</td><td>Payment settings</td></tr>
+        <tr><td>Currency</td><td>Currency settings</td></tr>
+        <tr><td>Email SMTP</td><td>Email settings</td></tr>
+        <tr><td>Languages</td><td>Languages and translations</td></tr>
+    </table>
+    <h3>Product settings that matter</h3>
+    <ul>
+        <li><strong>Approve before publishing</strong> — currently off. Turn on if Admin must approve every new listing.</li>
+        <li><strong>Vendor verification</strong> — currently on. New shops need Admin approval.</li>
+        <li><strong>SKU, variations, shipping</strong> — enable/disable marketplace features.</li>
+    </ul>
+
+    <h2 id="checklist">9. Go-live checklist</h2>
+    <ol class="steps">
+        <li>Point the domain to hosting and enable HTTPS.</li>
+        <li>Change admin and vendor passwords. Delete demo shops if they should not stay.</li>
+        <li>Set real company name, email, phone, and address in General settings.</li>
+        <li>Upload a real favicon. The header logo is the site name as text.</li>
+        <li>Configure SMTP so order and shop-request emails send.</li>
+        <li>Enable live payment gateways (Razorpay, Stripe, PayPal, etc.) with live keys.</li>
+        <li>Set commission, currency (INR if needed), and COD rules.</li>
+        <li>Replace sample products, categories, and slider with the client’s catalogue.</li>
+        <li>Use real product photos. Do not bake titles into images; the site prints names as text.</li>
+        <li>Add privacy policy, terms, refund, and shipping pages.</li>
+        <li>Test: register buyer → add to cart → checkout → vendor sees sale → payout request.</li>
+        <li>Test: new vendor applies → Admin approves → vendor adds a product with category, brand, and variations.</li>
+    </ol>
+
+    <h2 id="support">10. Support</h2>
+    <div class="card">
+        <p style="margin-top:0;"><strong>Digital Creatorss</strong> — platform and implementation partner</p>
+        <table>
+            <tr><th>Item</th><th>Details</th></tr>
+            <tr><td>Address</td><td>C-84, C Block, Sector 2, Noida, Uttar Pradesh</td></tr>
+            <tr><td>Email</td><td>sales@digitalcreatorss.com</td></tr>
+            <tr><td>Phone</td><td>+91 88516 13806</td></tr>
+        </table>
+        <p class="muted" style="margin-bottom:0;">For day-to-day selling questions, vendors use the dashboard. For platform configuration, only Admin users should change Settings.</p>
+    </div>
+
+    <p class="footer">© Digital Creatorss · Multi-Vendor Marketplace User Guide · Share with clients as HTML or PDF</p>
+</div>
+</body>
+</html>
