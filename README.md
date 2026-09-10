@@ -6,7 +6,7 @@ PHP / CodeIgniter marketplace for Digital Creatorss. Deploy this repo to Hosting
 
 1. Create a MySQL database in hPanel and note **host**, **database name**, **username**, and **password**.
 2. Import your current local database (`modesy_db`) via phpMyAdmin. The stock installer dump is `install/sql/install_modesy.sql` (empty catalog). To keep products, brands, and vendors, export `modesy_db` from local phpMyAdmin and import that file instead.
-3. In Hostinger **Git**, connect [https://github.com/ramniks05/multivendor-php.git](https://github.com/ramniks05/multivendor-php.git) and deploy into `public_html` (or the domain document root).
+3. In Hostinger **Git**, connect [https://github.com/ramniks05/multivendor-php.git](https://github.com/ramniks05/multivendor-php.git) and deploy into `public_html` (or the domain document root). Composer install at the repo root is a no-op (PHP only); payment SDKs are already in `application/third_party`.
 4. Edit `application/config/database.php` on the server:
 
 ```php
