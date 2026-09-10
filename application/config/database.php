@@ -94,3 +94,15 @@ $db['default'] = array(
     'failover' => array(),
     'save_queries' => TRUE
 );
+
+if (defined('ENVIRONMENT') && ENVIRONMENT === 'production') {
+    $db['default']['hostname'] = 'localhost';
+    $db['default']['username'] = 'u922228303_multivendor';
+    $db['default']['database'] = 'u922228303_multivender';
+    $db['default']['password'] = getenv('DB_PASSWORD') ? getenv('DB_PASSWORD') : '';
+    $db['default']['save_queries'] = FALSE;
+    $local_db = APPPATH . 'config/database.local.php';
+    if (is_file($local_db)) {
+        include $local_db;
+    }
+}

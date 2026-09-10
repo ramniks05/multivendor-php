@@ -1,0 +1,9 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+ * Copy this file to database.local.php on Hostinger (File Manager).
+ * Git deploys do not overwrite database.local.php.
+ * Never commit database.local.php — the GitHub repo is public.
+ */
+$db['default']['password'] = 'PASTE_HOSTINGER_MYSQL_PASSWORD_HERE';

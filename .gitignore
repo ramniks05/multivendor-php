@@ -13,6 +13,7 @@ Desktop.ini
 .env
 .env.*
 !.env.example
+application/config/database.local.php
 
 # CodeIgniter runtime
 application/cache/*
