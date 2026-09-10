@@ -538,8 +538,23 @@ $config['app_key'] = 'cbLQtiQWnKjEfgoIRvXyc5hgqbfIbU6atljuyqx5dfgte';
 |
 */
 require_once(BASEPATH . 'database/DB.php');
-$db =& DB();
-$config['general_settings'] = $db->get('general_settings')->row();
+try {
+    $db =& DB();
+    $gs_query = $db->get('general_settings');
+    $config['general_settings'] = (is_object($gs_query)) ? $gs_query->row() : null;
+} catch (Exception $e) {
+    $config['general_settings'] = null;
+}
+if (empty($config['general_settings'])) {
+    header('HTTP/1.1 503 Service Unavailable');
+    header('Content-Type: text/html; charset=utf-8');
+    echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Database setup required</title></head><body style="font-family:Arial,sans-serif;padding:40px;max-width:720px">';
+    echo '<h1>Database tables are missing</h1>';
+    echo '<p>MySQL connected, but the marketplace tables are not imported yet.</p>';
+    echo '<p>In Hostinger phpMyAdmin, open database <code>u922228303_multivender</code> and import <code>install/sql/modesy_db.sql</code>.</p>';
+    echo '</body></html>';
+    exit;
+}
 $config['languages'] = $db->where('status', 1)->order_by('language_order')->get('languages')->result();
 $routes = $db->select('route_key, route')->get('routes')->result();
 $obj_routes = new stdClass();
