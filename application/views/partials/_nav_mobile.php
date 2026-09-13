@@ -32,6 +32,9 @@
                         endif; ?>
                     </ul>
                     <ul id="navbar_mobile_links" class="navbar-nav">
+                        <li class="nav-item"><a href="<?php echo base_url('user-guide'); ?>" class="nav-link">User Guide</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('user-guide'); ?>#access" class="nav-link">Demo login</a></li>
+                        <li class="nav-item"><a href="<?php echo base_url('user-guide'); ?>#support" class="nav-link">Contact the team</a></li>
                         <?php if ($this->auth_check): ?>
                             <li class="nav-item">
                                 <a href="<?php echo generate_url("wishlist") . "/" . $this->auth_user->slug; ?>" class="nav-link">

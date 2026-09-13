@@ -1,4 +1,9 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<div class="dc-demo-wrap">
+    <div class="container">
+        <?php $this->load->view('partials/_demo_access'); ?>
+    </div>
+</div>
 <div class="section-slider">
     <?php if (!empty($slider_items) && $this->general_settings->slider_status == 1):
         $this->load->view("partials/_main_slider");

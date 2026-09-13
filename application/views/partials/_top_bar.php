@@ -3,8 +3,8 @@
 <div class="container">
 <div class="row">
 <div class="col-6 col-left">
-<?php if (!empty($this->menu_links)): ?>
 <ul class="navbar-nav">
+<li class="nav-item"><a href="<?php echo base_url('user-guide'); ?>" class="nav-link">User Guide</a></li>
 <?php if (!empty($this->menu_links)):
 foreach ($this->menu_links as $menu_link):
 if ($menu_link->location == 'top_menu'):
@@ -17,7 +17,6 @@ endif; ?>
 endforeach;
 endif; ?>
 </ul>
-<?php endif; ?>
 </div>
 <div class="col-6 col-right">
 <ul class="navbar-nav">

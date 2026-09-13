@@ -25,6 +25,10 @@
                                 <div class="row-custom">
                                     <ul>
                                         <li><a href="<?php echo lang_base_url(); ?>"><?php echo trans("home"); ?></a></li>
+                                        <li><a href="<?php echo base_url('user-guide'); ?>">User Guide</a></li>
+                                        <li><a href="<?php echo base_url('user-guide'); ?>#access">Demo login</a></li>
+                                        <li><a href="<?php echo base_url('user-guide'); ?>#customize">Customize</a></li>
+                                        <li><a href="<?php echo base_url('user-guide'); ?>#support">Contact the team</a></li>
                                         <?php if (!empty($this->menu_links)):
                                             foreach ($this->menu_links as $menu_link):
                                                 if ($menu_link->location == 'quick_links'):
@@ -125,7 +129,7 @@
                 <div class="container">
                     <div class="copyright">
                         <?php echo html_escape($this->settings->copyright); ?>
-                        <span class="powered-by"> &nbsp;|&nbsp; Powered by <strong>Digital Creatorss</strong></span>
+                        <span class="powered-by"> &nbsp;|&nbsp; Powered by <strong>Digital Creatorss</strong> &nbsp;|&nbsp; <a href="<?php echo base_url('user-guide'); ?>">User Guide</a> &nbsp;|&nbsp; <a href="mailto:sales@digitalcreatorss.com">sales@digitalcreatorss.com</a> &nbsp;|&nbsp; <a href="tel:+918851613806">+91 88516 13806</a></span>
                     </div>
                     <div class="footer-payment-icons">
                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo base_url(); ?>assets/img/payment/visa.svg" alt="visa" class="lazyload">

@@ -252,6 +252,7 @@ foreach ($this->languages as $language): ?>
                 <div class="auth-box">
                     <button type="button" class="close" data-dismiss="modal"><i class="icon-close"></i></button>
                     <h4 class="title"><?php echo trans("login"); ?></h4>
+                    <?php $this->load->view('partials/_demo_access', ['demo_compact' => true]); ?>
                     <!-- form start -->
                     <form id="form_login" novalidate="novalidate">
                         <div class="social-login">

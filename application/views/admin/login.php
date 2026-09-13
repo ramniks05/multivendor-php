@@ -69,6 +69,12 @@
         </div>
 
         <?php echo form_close(); ?><!-- form end -->
+
+        <div class="dc-admin-demo">
+            <p><strong>Demo login</strong></p>
+            <p>Email: <code>admin@example.com</code><br>Password: <code>admin123</code></p>
+            <p><a href="<?php echo base_url('user-guide'); ?>" target="_blank">User guide</a> · <a href="<?php echo base_url('user-guide'); ?>#customize" target="_blank">Customize</a> · <a href="mailto:sales@digitalcreatorss.com">Contact the team</a></p>
+        </div>
     </div>
     <div class="text-center m-t-15">
         <a class="btn btn-md" href="<?php echo lang_base_url(); ?>"><?php echo trans("goto_home"); ?></a>

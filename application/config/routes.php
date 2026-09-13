@@ -113,6 +113,7 @@ foreach ($languages as $language) {
         $route[$key . getr('blog', $rts) . '/(:any)/(:any)']['GET'] = 'home_controller/post/$1/$2';
         /*contact*/
         $route[$key . getr('contact', $rts)]['GET'] = 'home_controller/contact';
+        $route[$key . 'user-guide']['GET'] = 'home_controller/user_guide';
         /*messages*/
         $route[$key . getr('messages', $rts)]['GET'] = 'message_controller/messages';
         $route[$key . getr('messages', $rts) . '/' . getr('conversation', $rts) . '/(:num)']['GET'] = 'message_controller/conversation/$1';

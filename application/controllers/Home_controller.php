@@ -50,6 +50,20 @@ class Home_controller extends Home_Core_Controller
     }
 
     /**
+     * Public user guide (demo credentials, customize, contact)
+     */
+    public function user_guide()
+    {
+        get_method();
+        $file = FCPATH . 'USER_GUIDE.html';
+        if (!is_file($file)) {
+            $this->error_404();
+            return;
+        }
+        $this->output->set_content_type('text/html')->set_output(file_get_contents($file));
+    }
+
+    /**
      * Contact
      */
     public function contact()

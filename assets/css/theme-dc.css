@@ -473,6 +473,115 @@ h1.product-title {
     background: var(--mds-primary) !important;
 }
 
+.dc-demo-wrap {
+    background: #181819;
+    padding: 18px 0 4px;
+}
+
+.dc-demo-access {
+    background: #222326;
+    border: 1px solid #2F343A;
+    border-radius: 12px;
+    padding: 16px 18px 14px;
+    margin-bottom: 14px;
+    color: #E8ECF0;
+}
+
+.dc-demo-kicker {
+    margin: 0 0 6px;
+    color: #3E9DA5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.dc-demo-lead {
+    margin: 0 0 10px;
+    color: #C5CDD6;
+    font-size: 14px;
+}
+
+.dc-demo-creds {
+    margin: 0 0 12px;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #D7DDE3;
+}
+
+.dc-demo-creds span {
+    font-family: Consolas, "Courier New", monospace;
+    color: #fff;
+}
+
+.dc-demo-creds a,
+.dc-demo-access a {
+    color: #7EC8CE;
+}
+
+.dc-demo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dc-demo-btn {
+    display: inline-block;
+    background: #3E9DA5;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dc-demo-btn-ghost {
+    background: transparent;
+    border: 1px solid #3E9DA5;
+    color: #7EC8CE !important;
+}
+
+.dc-demo-access-compact {
+    background: #F4F6F7;
+    border: 1px solid #E6EAED;
+    color: #1C1C1E;
+    margin: 0 0 16px;
+}
+
+.dc-demo-access-compact .dc-demo-kicker {
+    color: #2F8087;
+}
+
+.dc-demo-access-compact .dc-demo-creds {
+    color: #5B6470;
+}
+
+.dc-demo-access-compact .dc-demo-creds span {
+    color: #181819;
+}
+
+.dc-demo-access-compact a {
+    color: #2F8087;
+}
+
+.login-box .dc-admin-demo {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #555;
+}
+
+.login-box .dc-admin-demo code {
+    background: #f4f6f7;
+    padding: 1px 6px;
+}
+
+.powered-by a {
+    color: #7EC8CE;
+}
+
 @media (max-width: 768px) {
     .product-item {
         margin-bottom: 16px;
